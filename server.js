@@ -199,7 +199,7 @@ async function main() {
     // Define the tool
     server.tool(
       'applescript_execute',
-'''      
+      `
 Execute AppleScript code to interact with macOS applications and system features. This tool provides direct access to Apple's automation framework.
 
 CRITICAL REQUIREMENTS FOR APPLE NATIVE APPS:
@@ -304,7 +304,7 @@ CRITICAL REQUIREMENTS FOR APPLE NATIVE APPS:
 - Records: {key1:value1, key2:value2}
 
 IMPORTANT: Always use exact date/time formats specified above. Validate all required properties are included before execution. Use proper error handling for production scripts.
-  ''',
+  `,
       {
         code_snippet: z.string().describe('Multi-line appleScript code to execute'),
         timeout: z.number().optional().describe('Command execution timeout in seconds (default: 60)')
