@@ -188,6 +188,9 @@ async function main() {
   logger.info(`Using remote host: ${config.remoteHost}`);
   logger.info(`Remote user: ${config.remoteUser || 'not set'}`);
   logger.info(`Remote password ${config.remotePassword ? 'is' : 'is not'} set`);
+
+  const currentDate = new Date();
+  const formattedDateTime = currentDate.toLocaleString();
   
   try {
     // Create the server
@@ -203,6 +206,10 @@ async function main() {
 Execute AppleScript code to interact with macOS applications and system features. This tool provides direct access to Apple's automation framework.
 
 CRITICAL REQUIREMENTS FOR APPLE NATIVE APPS:
+
+# CRITICAL:
+- PLEASE ENSURE YOU USE THE CURRENT DATE AS BASE FOR ALL DATE AND TIME RELATED TASKS
+- THE CURRENT DATE AND TIME IS: ${formattedDateTime}
 
 ## REMINDERS APP
 - Date/Time Format: Use 'date "MM/DD/YYYY HH:MM:SS AM/PM"' format
